@@ -1,7 +1,7 @@
 <style scoped>
 .spinner {
     font-size: 2.5rem;
-    widtH: 1em;
+    width: 1em;
     height: 1em;
     fill: transparent;
     stroke: var(--color);
