@@ -38,7 +38,7 @@ ASCII diagram to represent the archtecture
                                        |                           |
                               +--------+                           +------------+
                               |        +---------------------------+            |
-+-----------------------------+--------+---------------------------+------------+------------------------------------+
++--------------------------------------------------------------------------------------------------------------------+
 |                             |                                                 |                                    |
 |                             |                                                 |                                    |
 |                             |                                                 |                                    |
@@ -65,6 +65,8 @@ ASCII diagram to represent the archtecture
 |                                           App.vue                                                                  |
 |                                                                                                                    |
 +--------------------------------------------------------------------------------------------------------------------+
+
+
 
 The CSS theme was defined using CSS custom properties (variables), Complex websites have very large amounts of CSS, often with a lot of repeated values. For example, the same color might be used in hundreds of different places, requiring global search and replace if that color needs to change. When changing to light or dark theme, the changes will reflect on all the document. The themes were defined inside src/assets/base.css. 
 In the store, the code checks if the page is already visited and has user preference thanks to localStorage.
