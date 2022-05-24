@@ -29,42 +29,7 @@ The bigger the application gets, the harder it is for data to remain consistent 
 
 ASCII diagram to represent the archtecture
 
-
-                                       +---------------------------+
-                                       |                           |
-                                       |                           |
-                                       |      store.js             |
-                                       |                           |
-                                       |                           |
-                              +--------+                           +------------+
-                              |        +---------------------------+            |
-+-----------------------------+--------+---------------------------+------------+------------------------------------+
-|                             |                                                 |                                    |
-|                             |                                                 |                                    |
-|                             |                                                 |                                    |
-|                             |                               +-----------------+--------------------------+         |
-|                             |                               |                 |                          |         |
-|                             |                               |                 |                          |         |
-|                             |                               |                 |                          |         |
-|          +------------------+-----+                         |     +-----------+----------------+         |         |
-|          |                        |                         |     |                            |         |         |
-|          |                        |                         |     |                            |         |         |
-|          |                        |                         |     |                            |         |         |
-|          |      ThemeToggle.vue   |                         |     |       WeatherWidget        |         |         |
-|          |                        |                         |     |                            |         |         |
-|          |                        |                         |     |                            |         |         |
-|          +------------------------+                         |     +----------------------------+         |         |
-|                                                             |                                            |         |
-|                                                             |                                            |         |
-|                                                             |                                            |         |
-|                                                             |                                            |         |
-|                                                             |             HomeView.vue                   |         |
-|                                                             |                                            |         |
-|                                                             +--------------------------------------------+         |
-|                                                                                                                    |
-|                                           App.vue                                                                  |
-|                                                                                                                    |
-+--------------------------------------------------------------------------------------------------------------------+
+<img width="973" alt="Screen Shot 2022-05-24 at 15 55 21" src="https://user-images.githubusercontent.com/14133057/169967760-ad912864-1851-4ed6-8bac-d7174a97b7e9.png">
 
 The CSS theme was defined using CSS custom properties (variables), Complex websites have very large amounts of CSS, often with a lot of repeated values. For example, the same color might be used in hundreds of different places, requiring global search and replace if that color needs to change. When changing to light or dark theme, the changes will reflect on all the document. The themes were defined inside src/assets/base.css. 
 In the store, the code checks if the page is already visited and has user preference thanks to localStorage.
