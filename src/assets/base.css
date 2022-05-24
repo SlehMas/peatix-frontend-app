@@ -1,0 +1,25 @@
+:root {
+    --background: hsl(0, 0%, 98%);
+    --color: hsl(0, 0%, 13%);
+    --color-2: hsl(0, 0%, 27%);
+    --accent-color: #cacaca;
+    --color-3: hsl(0, 0%, 40%);
+    --border-color: hsl(0, 0%, 88%);
+    --card-background: hsl(160, 88%, 63%);
+    --card-background-hover: hsl(0, 0%, 80%);
+    --card-boxshadow: 0 0 30px 0 hsla(0, 0%, 50%, 0.10);
+    --text-shadow: 0px 3px 3px hsla(0, 0%, 13%, 0.251);
+    --dark-toggle-size: 4rem;
+}
+
+.dark {
+    --background: hsl(0, 0%, 2%);
+    --color: hsl(0, 0%, 87%);
+    --color-2: hsl(0, 0%, 73%);
+    --color-3: hsl(0, 0%, 60%);
+    --border-color: hsl(0, 0%, 12%);
+    --card-background: rgb(68, 66, 66);
+    --card-background-hover: hsl(0, 0%, 20%);
+    --card-boxshadow: 0 0 30px 0 hsla(0, 0%, 0%, 0.10);
+    --text-shadow: 0px 3px 3px hsla(0, 0%, 87%, 0.251);
+}
