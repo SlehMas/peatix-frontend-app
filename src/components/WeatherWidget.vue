@@ -134,7 +134,6 @@ function getWeatherData() {
     axios
         .get("https://dataservice.accuweather.com/forecasts/v1/hourly/1hour/" + location.value.locationKey + "?apikey=" + api.value.apiKey + "&language=" + api.value.lang + "&details=false&metric=true")
         .then((Response) => {
-            console.log('test test', Response.data)
             updateWeatherStore({
                 hourData: Response.data[0]
             })
