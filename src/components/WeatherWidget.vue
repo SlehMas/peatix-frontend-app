@@ -102,7 +102,7 @@ function getIpAddress(param = false) {
 }
 function getIpLocation() {
     axios
-        .get("http://dataservice.accuweather.com/locations/v1/cities/ipaddress?apikey=" + api.value.apiKey + "&q=" + ipAddress.value + "&language=" + api.value.lang + "&details=false")
+        .get("https://dataservice.accuweather.com/locations/v1/cities/ipaddress?apikey=" + api.value.apiKey + "&q=" + ipAddress.value + "&language=" + api.value.lang + "&details=false")
         .then((Response) => {
             updateLocationStore({
                 locationKey: Response.data.ParentCity.Key as string,
@@ -117,7 +117,7 @@ function getIpLocation() {
 }
 function getMeridianLocation() {
     axios
-        .get("http://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=" + api.value.apiKey + "&q=" + location.value.latitude + "," + location.value.longitude + "&language=" + api.value.lang + "&details=false&toplevel=false")
+        .get("https://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=" + api.value.apiKey + "&q=" + location.value.latitude + "," + location.value.longitude + "&language=" + api.value.lang + "&details=false&toplevel=false")
         .then((Response) => {
             updateLocationStore({
                 locationKey: Response.data.ParentCity.Key as string,
@@ -134,17 +134,18 @@ function getWeatherData() {
     axios
         .get("https://dataservice.accuweather.com/forecasts/v1/hourly/1hour/" + location.value.locationKey + "?apikey=" + api.value.apiKey + "&language=" + api.value.lang + "&details=false&metric=true")
         .then((Response) => {
+            console.log('test test', Response.data)
             updateWeatherStore({
                 hourData: Response.data[0]
             })
         })
         .catch((error) => {
-            weatherWidgetErr.value = true
+            // weatherWidgetErr.value = true
         })
 }
 function get5DayWeatherData() {
     axios
-        .get("http://dataservice.accuweather.com/forecasts/v1/daily/5day/" + location.value.locationKey + "?apikey=" + api.value.apiKey + "&language=" + api.value.lang + "&details=false&metric=true")
+        .get("https://dataservice.accuweather.com/forecasts/v1/daily/5day/" + location.value.locationKey + "?apikey=" + api.value.apiKey + "&language=" + api.value.lang + "&details=false&metric=true")
         .then((Response) => {
             updateWeatherStore({
                 fiveDayData: Response.data
